@@ -14,6 +14,19 @@ This app will allow users to register and login. Once the users have done that, 
 This app uses JSON Web Tokens to authenticate users and keep them logged in. All the data is consumed from an API hosted on Heroku using AngularJS. The site is styled with Bootstrap.
 
 ## Features
+### Existing Features
+- None yet!
+ 
+### Features Left to Implement
+- User Based Features
+    - Registration
+    - Login
+    - Logout
+- Todo Based Features
+    - Creating Todo Items
+    - Retrieving Todo Items
+    - Updating Todo Items
+    - Deleting Todo Items
  
 ## Tech Used
  
