@@ -1,0 +1,87 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+            
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Angular Todo</a>
+                </div>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapse-menu">
+
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li><a href="#/">Home</a></li>
+
+                    <li><a href="#/todo">Todo</a></li>
+
+                    <li ng-hide="store.get('username')"><a href="#/accounts/register">Register</a></li>
+
+                    <li ng-hide="store.get('username')"><a href="#/login">Login</a></li>
+
+                    <li><a id="userlink" ng-show="store.get('username')">user: {{store.get('username')}}</a></li>
+
+                     <li><a id="userlogout" href="#/logout" ng-show="store.get('username')">Log out</a></li>
+                
+                 </ul>
+
+                <ul class="nav navbar-nav navbar-right text-center visible-xs">
+                    <li><a href="#/">Home</a></li>
+
+                    <li><a href="#/todo" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="true">Todo</a></li>
+
+                    <li ng-hide="store.get('username')"><a href="#/accounts/register" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="true">Register</a></li>
+
+                    <li ng-hide="store.get('username')"><a href="#/login" data-toggle="collapse" data-target="#collapse-menu" aria-expanded="true">Login</a></li>
+
+                   <li><a id="userlink" ng-show="store.get('username')">user: {{store.get('username')}}</a></li>
+
+                   <li><a id="userlogout" href="#/logout" ng-show="store.get('username')"
+                   data-toggle="collapse" data-target="#collapse-menu" aria-expanded="true">Log out</a></li>
+                </ul>
+        
+            </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">Angular Todo</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/todo">Todo</a></li>
+                <li ng-hide="store.get('username')"><a href="#/accounts/register">Register</a></li>
+                <li ng-hide="store.get('username')"><a href="#/login">Login</a></li>
+
+               <li><a id="userlink" ng-show="store.get('username')">user: {{store.get('username')}}</a></li>
+
+               <li><a id="userlogout" href="#/logout" ng-show="store.get('username')">Log out</a></li>
+
+            </ul>
+        </div>
+</nav>

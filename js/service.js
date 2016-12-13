@@ -3,8 +3,8 @@ angular.module('UserService', [])
         UserAPIService = {
             callAPI: function(url, data) {
                 return $http.post(url, data);
-            }
-        };
+            } 
+        }; 
         return UserAPIService;
     });
 
@@ -31,3 +31,4 @@ angular.module('TodoService', [])
 
         return TodoAPIService;
     });
+

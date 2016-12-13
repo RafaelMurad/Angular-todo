@@ -1,6 +1,6 @@
 angular.module('TodoApp', ['ngRoute', 'RouteControllers', 'UserService', 'angular-storage', 'TodoService', 'TodoDirective']);
 
-angular.module('TodoApp').config(function($routeProvider) {
+var todoApp = angular.module('TodoApp').config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl: 'templates/home.html',
 		controller: 'HomeController'
@@ -12,8 +12,22 @@ angular.module('TodoApp').config(function($routeProvider) {
 	.when('/todo', {
 		templateUrl: 'templates/todo.html',
 		controller: 'TodoController'
-	}).when('/todo/edit/:id', {
+	})
+	.when('/todo/edit/:id', {
 	    templateUrl:'templates/edit-todo.html',
 	    controller: 'EditTodoController'
+	})
+	.when('/login', {
+		templateUrl: 'templates/login.html',
+		controller: 'LoginController'
+	})
+	.when('/logout', {
+		templateUrl: 'templates/logout.html',
+		controller: 'LogoutController'
 	});
+	
+});
+
+todoApp.run(function($rootScope,store){
+	$rootScope.store = store;
 });
